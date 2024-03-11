@@ -4,6 +4,7 @@
     layout_width="match_parent"
     layout_height="match_parent">
 
+    <!--小黄人-->
     <MinionsView
         id="@+id/minions"
         layout_gravity="center_vertical"
