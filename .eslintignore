@@ -1,0 +1,9 @@
+dist
+
+.eslintrc.js
+jest.*.js
+
+packages/excel-desktop-application/sdk
+
+package.json
+tsconfig.json

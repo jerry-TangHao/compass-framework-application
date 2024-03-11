@@ -1,0 +1,92 @@
+const path = require('path');
+
+const resolve = (url) => path.resolve(__dirname, url);
+
+module.exports = {
+    "extends": [
+        'airbnb-base',
+        'airbnb-typescript/base'
+    ],
+    "env": {
+        "browser": true,
+        "es2021": true
+    },
+    "parser": "@typescript-eslint/parser",
+    "plugins": [
+        "unused-imports",
+        "@typescript-eslint"
+    ],
+    "rules": {
+        "unused-imports/no-unused-imports": "error",
+
+        "@typescript-eslint/no-loop-func":"off",
+        "import/order": "off",
+        "no-useless-return":"off",
+        "no-await-in-loop":"off",
+        "no-useless-catch":"off",
+        "import/no-extraneous-dependencies":"off",
+        "prefer-spread":"off",
+        "global-require":"off",
+        "@typescript-eslint/no-redeclare": "off",
+        "default-case-last": "off",
+        "no-return-assign": "off",
+        "operator-assignment": "off",
+        "no-inner-declarations":"off",
+        "no-fallthrough": "off",
+        "no-constant-condition": "off",
+        "function-call-argument-newline":"off",
+        "no-else-return" : "off",
+        "@typescript-eslint/no-loss-of-precision":"off",
+        "no-cond-assign": "off",
+        "prefer-regex-literals": "off",
+        "no-alert": "off",
+        "@typescript-eslint/no-empty-function": "off",
+        "no-restricted-globals": "off",
+        "prefer-object-spread": "off",
+        "guard-for-in":"off",
+        "@typescript-eslint/no-implied-eval": "off",
+        "no-multi-assign": "off",
+        "no-lonely-if": "off",
+        "@typescript-eslint/lines-between-class-members": "off",
+        "prefer-exponentiation-operator":"off",
+        "no-self-compare": "off",
+        "no-unused-labels": "off",
+        "no-restricted-properties": "off",
+        "function-paren-newline": "off",
+        "no-labels": "off",
+        "@typescript-eslint/no-shadow": "off",
+        "no-nested-ternary": "off",
+        "no-debugger": "off",
+        "no-mixed-operators": "off",
+        "prefer-destructuring": "off",
+        "no-console": "off",
+        "import/export": "off",
+        "@typescript-eslint/quotes": "off",
+        "prefer-const": "off",
+        'linebreak-style': ["off", "windows"],
+        "prefer-rest-params": "off",
+        "max-classes-per-file": "off",
+        "max-len": "off",
+        "new-parens": "off",
+        "no-continue": "off",
+        "no-plusplus": "off",
+        "import/prefer-default-export": "off",
+        "@typescript-eslint/naming-convention": "off",
+        "@typescript-eslint/no-unused-vars": "off",
+        "@typescript-eslint/no-use-before-define": "off",
+        "import/no-cycle": "off",
+        "no-bitwise": 'off',
+        "default-case": "off",
+        "no-param-reassign": "off",
+        "class-methods-use-this": "off",
+        "consistent-return": "off",
+        "no-underscore-dangle": "off",
+        "no-restricted-syntax": "off",
+    },
+    "parserOptions": {
+        "warnOnUnsupportedTypeScriptVersion": false,
+        "ecmaVersion": 12,
+        "sourceType": "module",
+        "project": resolve("tsconfig.json")
+    }
+}

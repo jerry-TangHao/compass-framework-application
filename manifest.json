@@ -1,0 +1,17 @@
+{
+    "name": "example-application",
+    "groupId": "example",
+    "artifactId": "example",
+    "version": "0.0.1",
+    "settings": {
+        "nodejs": {
+            "container": {
+                "width": 1600,
+                "height": 800
+            }
+        },
+        "browser": {
+            "container": "#container"
+        }
+    }
+}

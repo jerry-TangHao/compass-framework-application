@@ -1,0 +1,68 @@
+{
+  "name": "example-application",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "web:webpack-dev-example-application": "webpack-dev-server --open --config build/web/webpack.dev.js"
+  },
+  "license": "ISC",
+  "author": "",
+  "devDependencies": {
+    "typescript": "4.9.5",
+
+    "assert":"2.0.0",
+    "buffer": "6.0.3",
+    "ajv": "7.2.4",
+    "lerna": "6.0.1",
+    "slash": "3.0.0",
+    "mime": "2.4.4",
+    "typedoc": "0.23.25",
+
+    "@types/offscreencanvas": "2019.6.4",
+    "@types/css-font-loading-module": "0.0.7",
+
+    "eslint": "8.26.0",
+    "eslint-config-airbnb-base": "15.0.0",
+    "eslint-plugin-import": "2.26.0",
+    "eslint-config-airbnb-typescript": "17.0.0",
+    "@typescript-eslint/eslint-plugin": "5.38.1",
+    "@typescript-eslint/parser": "5.38.1",
+    "eslint-plugin-unused-imports": "2.0.0",
+
+    "compass-library": "1.0.12",
+    "compass-core": "1.0.83",
+
+    "jest-environment-jsdom": "29.5.0",
+    "@types/jest": "29.5.0",
+    "jest": "29.5.0",
+    "ts-jest": "29.1.0",
+    "jest-canvas-mock": "2.5.0",
+
+    "webpack": "5.76.3",
+    "webpack-cli": "4.10.0",
+    "webpack-dev-server": "4.9.2",
+
+    "webpack-node-file-loader": "1.0.8",
+    "raw-loader": "4.0.2",
+    "css-loader": "6.5.1",
+    "file-loader": "6.2.0",
+    "less-loader": "10.2.0",
+    "ts-loader": "9.3.1",
+    "json-loader": "0.5.7",
+    "url-loader": "4.1.1",
+    "esbuild-loader": "2.21.0",
+
+    "clean-webpack-plugin": "4.0.0",
+    "eslint-webpack-plugin": "3.2.0",
+    "copy-webpack-plugin": "10.0.0",
+    "webpack-generator-manifest": "1.0.1",
+    "mini-css-extract-plugin": "2.4.5",
+    "webpack-merge": "5.8.0",
+    "terser-webpack-plugin": "5.3.6",
+    "webpack-javascript-obfuscator-plugin": "1.0.9",
+    "webpack-obfuscator": "3.5.1",
+    "html-webpack-plugin": "5.5.0",
+    "progress-bar-webpack-plugin": "2.1.0"
+  }
+}
