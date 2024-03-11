@@ -6,6 +6,7 @@
 
     <MinionsView
         id="@+id/minions"
+        layout_gravity="center_vertical"
         layout_width="300px"
         layout_height="500px"/>
 
@@ -55,6 +56,7 @@
                 layout_height="wrap_content">
 
                 <Button
+                    id="@+id/cancel"
                     text="取 消"
                     background="corners(#ffffff, #e0e0e0, 6px, 1px)"
                     textSize="14px"
