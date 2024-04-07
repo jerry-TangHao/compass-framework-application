@@ -31,7 +31,7 @@
     "eslint-plugin-unused-imports": "2.0.0",
 
     "compass-library": "1.0.12",
-    "compass-core": "1.0.83",
+    "compass-core": "1.0.84",
 
     "jest-environment-jsdom": "29.5.0",
     "@types/jest": "29.5.0",
