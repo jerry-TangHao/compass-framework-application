@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "web:webpack-dev-example-application": "webpack-dev-server --open --config build/web/webpack.dev.js"
+    "browser:webpack-dev-application": "webpack-dev-server --open --config build/browser/webpack.dev.js",
+    "browser:webpack-prod-application": "webpack --config build/browser/webpack.prod.js"
   },
   "license": "ISC",
   "author": "",

@@ -1,17 +1,20 @@
-const path = require('path');
-const { merge } = require('webpack-merge');
+const TerserWebpackPlugin = require('terser-webpack-plugin');
+const WebpackObfuscator = require('webpack-obfuscator');
+const CopyPlugin = require('copy-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin').CleanWebpackPlugin;
 const ESLintPlugin = require('eslint-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ProgressBarWebpackPlugin = require('progress-bar-webpack-plugin');
+
+const path = require('path');
+const { merge } = require('webpack-merge');
 const common = require('./webpack.config');
 const { project } = require('../project.config');
 
 const resolve = (url) => path.resolve(__dirname, "../..", url);
 
 module.exports = merge(common, {
-  mode: 'development',
-  devtool: 'source-map',
+  mode: 'production',
   target: 'web',
   plugins: [
     new CleanWebpackPlugin(),
@@ -22,18 +25,44 @@ module.exports = merge(common, {
       fix: true,
     }),
     new ProgressBarWebpackPlugin(),
+    new CopyPlugin({
+      patterns: [{
+        from: 'sdk/**', to: '',
+      }],
+    }),
+    new WebpackObfuscator({
+      compact: true,
+      renameProperties: true,
+      renamePropertiesMode: 'safe',
+      seed: Date.now(),
+      selfDefending: true,
+      reservedNames: ['^[a-z-A-Z][a-zA-Z0-9-_]+$', '__sys_stat64'],
+    }),
     new HtmlWebpackPlugin({
       template: './index.html',
       title: project,
       scriptLoading: 'blocking',
     }),
   ],
-  externals: {},
+  externals: {
+    "compass-library": "compass-library",
+    "compass-core": "compass-core",
+  },
+  optimization: {
+    minimize: true,
+    minimizer: [
+      new TerserWebpackPlugin({
+        minify: TerserWebpackPlugin.uglifyJsMinify,
+        terserOptions: {},
+        extractComments: false,
+      }),
+    ],
+  },
   output: {
     filename: 'js/[name].js',
     libraryTarget: 'umd',
     globalObject: 'this',
     library: project,
-    path: resolve('dist/web'),
+    path: resolve('dist/browser'),
   },
 });
