@@ -1,6 +1,6 @@
 # Canvas ui render system (UI渲染系统)
 
-## Building UI using XML (使用XML构建界面)
+## Building UI layout using Android style XML (使用XML构建界面)
 ```xml
 <?xml version="1.0" encoding="UTF-8" ?>
 <FrameLayout
